@@ -9,6 +9,9 @@ import EcommerceDeveopment from './pages/EcommerceDeveopment';
 import Responsivedesign from './pages/Responsivedesign';
 import Cmsdevelopment from './pages/Cmsdevelopment';
 import Webhosting from './pages/Webhosting';
+import Domainregistration from './pages/Domainregistration';
+import TechnologyPage from './pages/TechnologyPage';
+
 function App() {
 	return (
 		<section>
@@ -22,6 +25,8 @@ function App() {
 					<Route exact path="/ecommerce_website_development" component={EcommerceDeveopment} />
 					<Route exact path="/responsive_website_design" component={Responsivedesign} />
 					<Route exact path="/web_hosting" component={Webhosting} />
+					<Route exact path="/domain_registration" component={Domainregistration} />
+					<Route exact path="/technology" component={TechnologyPage} />
 				</Switch>
 			</BrowserRouter>
 		</section>

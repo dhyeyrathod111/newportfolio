@@ -25,22 +25,22 @@ function HeaderUrlLInks() {
                         <li><a href="#" className="dropdown-toggle-inner">Domain Web Hosting</a>
                             <ul className="sub-menu">
                                 <li><Link to={'/web_hosting'}>Web hosting</Link></li>
-                                {/* <li><a href="login.html">Login Page 2</a></li>
-                                <li><a href="basic-sign-up.html">Signup Page 1</a></li> */}
+                                <li><Link to={'/domain_registration'}>Domain Registration</Link></li>
                             </ul>
                         </li>
-                        <li><a href="#" className="dropdown-toggle-inner">Digital Marketing</a>
+
+                        {/* <li><a href="#" className="dropdown-toggle-inner">Digital Marketing</a>
                             <ul className="sub-menu">
                                 <li><a href="basic-login.html">Login Page 1</a></li>
                                 <li><a href="login.html">Login Page 2</a></li>
                                 <li><a href="basic-sign-up.html">Signup Page 1</a></li>
                             </ul>
-                        </li>   
+                        </li>*/}
                         
 
                     </ul>
                 </li>
-                <li><a href="services.html">Technology</a></li>
+                <li><Link to={'/technology'}>Technology</Link></li>
                 <li><a href="services.html">Projects</a></li>
                 <li><a href="services.html">Team</a></li>
                 <li><a href="services.html">Contact us</a></li>
