@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import OneTechnologyComp from './OneTechnologyComp';
+import OneProjectComp from './OneProjectComp';
 import Loader from './Loader';
-const TechnologyPageContentComp = props => {
+const ProjectPageContent = props => {
     const [apidata, setApidata] = useState(null);
     useEffect(() => {
         if (apidata == null) {
-            fetch('http://localhost/dhyey_rathod/apistacksetup/api/all_skill')
+            fetch('http://localhost/dhyey_rathod/apistacksetup/api/all_project')
                 .then(response => response.json())
                 .then(data => {
                     setApidata(data);
@@ -17,12 +17,12 @@ const TechnologyPageContentComp = props => {
         <section className="our-blog-section ptb-100">
             <div className="container">
                 <div className="row">
-                    {apidata.skills.map(oneSkils => (
-                        <OneTechnologyComp
-                            name="Jquery"
-                            image={oneSkils.image}
-                            description={oneSkils.descriptions.slice(0, 60)}
-                            key={oneSkils.id}
+                    {apidata.projects.map(oneProject => (
+                        <OneProjectComp
+                            name={oneProject.title}
+                            image={oneProject.file_name}
+                            description={oneProject.description.slice(0, 60)}
+                            key={oneProject.id}
                         />
                     ))}
                 </div>
@@ -31,4 +31,5 @@ const TechnologyPageContentComp = props => {
     )
 }
 
-export default TechnologyPageContentComp
+export default ProjectPageContent
+

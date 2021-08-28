@@ -11,6 +11,8 @@ import Cmsdevelopment from './pages/Cmsdevelopment';
 import Webhosting from './pages/Webhosting';
 import Domainregistration from './pages/Domainregistration';
 import TechnologyPage from './pages/TechnologyPage';
+import ResumePage from './pages/ResumePage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
 	return (
@@ -27,6 +29,9 @@ function App() {
 					<Route exact path="/web_hosting" component={Webhosting} />
 					<Route exact path="/domain_registration" component={Domainregistration} />
 					<Route exact path="/technology" component={TechnologyPage} />
+					<Route exact path="/resume" component={ResumePage} />
+					<Route exact path="/projects" component={ProjectsPage} />
+
 				</Switch>
 			</BrowserRouter>
 		</section>

@@ -14,7 +14,7 @@ const AboutusPage = () => {
         <React.Fragment>
             <OtherPageHeader />
             <div className="main">
-                <OtherPageBanner pagename="About Me" />
+                <OtherPageBanner pagename="About me" />
                 <AboutHomepage />
                 <Promosection />
                 <Workprocesssection />

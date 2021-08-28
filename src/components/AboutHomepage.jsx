@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutHomepage = () => {
+const AboutHomepage = props => {
     return (
         <section className="about-us-section ptb-100 gray-light-bg">
             <div className="container">
