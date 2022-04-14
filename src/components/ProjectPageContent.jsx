@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import OneProjectComp from './OneProjectComp';
 import Loader from './Loader';
+import config from 'react-global-configuration';
+
 const ProjectPageContent = props => {
     const [apidata, setApidata] = useState(null);
     useEffect(() => {
         if (apidata == null) {
-            fetch('http://localhost/dhyey_rathod/apistacksetup/api/all_project')
+            fetch(config.get('api_url')+'/all_project')
                 .then(response => response.json())
                 .then(data => {
                     setApidata(data);
@@ -22,6 +24,7 @@ const ProjectPageContent = props => {
                             name={oneProject.title}
                             image={oneProject.file_name}
                             description={oneProject.description.slice(0, 60)}
+                            prjectID={oneProject.id}
                             key={oneProject.id}
                         />
                     ))}

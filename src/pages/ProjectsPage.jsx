@@ -4,6 +4,7 @@ import OtherPageBanner from '../components/OtherPageBanner';
 import ProjectPageContent from '../components/ProjectPageContent';
 import Footer from '../components/Footer';
 
+
 function ProjectsPage() {
     useEffect(() => window.scrollTo(0,0));
     return (

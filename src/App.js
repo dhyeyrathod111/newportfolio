@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import config from 'react-global-configuration';
 import './App.css';
 import Homepage from './pages/Homepage';
 import AboutusPage from './pages/AboutusPage';
@@ -13,6 +14,23 @@ import Domainregistration from './pages/Domainregistration';
 import TechnologyPage from './pages/TechnologyPage';
 import ResumePage from './pages/ResumePage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetails from './pages/ProjectDetails';
+import TechnologyDetails from './pages/TechnologyDetails';
+
+config.set({
+    api_url: 'http://localhost/dhyey_rathod/apistacksetup/api/',
+    api_image_url: 'http://localhost/dhyey_rathod/apistacksetup/',
+    facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
+    instagram_url:'https://www.instagram.com/prince.rathod111/'
+});
+
+// config.set({ 
+//     api_url:'http://dhyeyrathod.rf.gd/apistacksetup/API/',
+//     api_image_url:'http://dhyeyrathod.rf.gd/apistacksetup/',
+//     facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
+//     instagram_url:'https://www.instagram.com/prince.rathod111/'
+// });
+
 
 function App() {
 	return (
@@ -29,9 +47,10 @@ function App() {
 					<Route exact path="/web_hosting" component={Webhosting} />
 					<Route exact path="/domain_registration" component={Domainregistration} />
 					<Route exact path="/technology" component={TechnologyPage} />
+					<Route exact path="/technology_details/:tech_id" component={TechnologyDetails} />
 					<Route exact path="/resume" component={ResumePage} />
 					<Route exact path="/projects" component={ProjectsPage} />
-
+					<Route exact path="/projects_details/:project_title/:project_id" component={ProjectDetails} />
 				</Switch>
 			</BrowserRouter>
 		</section>

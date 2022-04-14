@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import OneTechnologyComp from './OneTechnologyComp';
+import config from 'react-global-configuration';
 import Loader from './Loader';
 const TechnologyPageContentComp = props => {
     const [apidata, setApidata] = useState(null);
     useEffect(() => {
         if (apidata == null) {
-            fetch('http://localhost/dhyey_rathod/apistacksetup/api/all_skill')
+            fetch(`${config.get('api_url')}/all_skill`)
                 .then(response => response.json())
                 .then(data => {
                     setApidata(data);

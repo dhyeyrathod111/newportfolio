@@ -13,7 +13,7 @@ function Ourblogsection() {
                             <p className="lead">
                                 Enthusiastically drive revolutionary opportunities before emerging leadership. Distinctively
                                 transform tactical methods of empowerment via resource.
-                    </p>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -31,16 +31,16 @@ function Ourblogsection() {
                                 <div className="post-meta mb-2">
                                     <ul className="list-inline meta-list">
                                         <li className="list-inline-item"><i className="fas fa-heart mr-2" /><span>45</span>
-                            Comments
-                          </li>
+                                            Comments
+                                        </li>
                                         <li className="list-inline-item"><i className="fas fa-share-alt mr-2" /><span>10</span>
-                            Share
-                          </li>
+                                            Share
+                                        </li>
                                     </ul>
                                 </div>
                                 <h3 className="h5 mb-2 card-title"><a href="#">Appropriately productize fully</a></h3>
                                 <p className="card-text">Some quick example text to build on the card title and make up the
-                        bulk.</p>
+                                    bulk.</p>
                                 <a href="#" className="detail-link">Read more <span className="ti-arrow-right" /></a>
                             </div>
                         </div>
@@ -58,16 +58,16 @@ function Ourblogsection() {
                                 <div className="post-meta mb-2">
                                     <ul className="list-inline meta-list">
                                         <li className="list-inline-item"><i className="fas fa-heart mr-2" /><span>45</span>
-                            Comments
-                          </li>
+                                            Comments
+                                        </li>
                                         <li className="list-inline-item"><i className="fas fa-share-alt mr-2" /><span>10</span>
-                            Share
-                          </li>
+                                            Share
+                                        </li>
                                     </ul>
                                 </div>
                                 <h3 className="h5 mb-2 card-title"><a href="#">Quickly formulate backend</a></h3>
                                 <p className="card-text">Synergistically engage effective ROI after customer directed
-                        partnerships.</p>
+                                    partnerships.</p>
                                 <a href="#" className="detail-link">Read more <span className="ti-arrow-right" /></a>
                             </div>
                         </div>
@@ -85,16 +85,16 @@ function Ourblogsection() {
                                 <div className="post-meta mb-2">
                                     <ul className="list-inline meta-list">
                                         <li className="list-inline-item"><i className="fas fa-heart mr-2" /><span>45</span>
-                            Comments
-                          </li>
+                                            Comments
+                                        </li>
                                         <li className="list-inline-item"><i className="fas fa-share-alt mr-2" /><span>10</span>
-                            Share
-                          </li>
+                                            Share
+                                        </li>
                                     </ul>
                                 </div>
                                 <h3 className="h5 mb-2 card-title"><a href="#">Objectively extend extensive</a></h3>
                                 <p className="card-text">Holisticly mesh open-source leadership rather than proactive
-                        users. </p>
+                                    users. </p>
                                 <a href="#" className="detail-link">Read more <span className="ti-arrow-right" /></a>
                             </div>
                         </div>

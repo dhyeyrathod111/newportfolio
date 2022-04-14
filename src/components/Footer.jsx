@@ -10,7 +10,7 @@ function Footer() {
                             <div className="row footer-top-wrap">
                                 <div className="col-md-4 col-sm-6">
                                     <div className="footer-nav-wrap text-white">
-                                        <img src="assets/img/logo-white.png" alt="logo" className="mb-2" />
+                                        <img src={'/assets/img/logo-white.png'} alt="logo" className="mb-2" />
                                         <p>Continually myocardinate inexpensive catalysts for change with seamlessinitiatives.</p>
                                         <div className="social-nav mt-4">
                                             <ul className="list-unstyled social-list mb-0">

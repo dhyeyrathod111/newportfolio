@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const OneProjectComp = props => {
     const styleObj = {
@@ -11,7 +12,7 @@ const OneProjectComp = props => {
                     <img src={'assets/' + props.image} className="card-img-top skillImage" alt="blog" />
                 </div>
                 <div className="card-body">
-                    <h2 className="h2 mb-2 card-title text-center"><a href="#">{props.name}</a></h2>
+                    <h2 className="h2 mb-2 card-title text-center"><Link to={'/projects_details/'+props.name+'/'+props.prjectID}>{props.name}</Link></h2>
                 </div>
             </div>
         </div>
