@@ -1,17 +1,22 @@
 import React from 'react'
 import config from 'react-global-configuration';
 import ProjectSidebar from './ProjectSidebar';
-
-
+import { Link } from 'react-router-dom';
 
 const OneProjectDeatils = props => {
+    const service = [
+        { "name": "Website design", "url": "website_design" },
+        { "name": "Responsive Website Design", "url": "responsive_website_design" },
+        { "name": "Website Development", "url": "website_development" },
+        { "name": "E-Commerce Website", "url": "ecommerce_website_development" },
+    ];
     return (
         <div>
             <div className="module ptb-100">
                 <div className="container">
                     <div className="row">
-                        
-                        <div className="col-lg-8 col-md-8"> 
+
+                        <div className="col-lg-8 col-md-8">
 
                             <article className="post">
                                 <div className="post-preview"><img src={config.get('api_image_url') + '/' + props.project.file_name} alt="article" className="img-fluid" /></div>
@@ -28,9 +33,26 @@ const OneProjectDeatils = props => {
                             </article>
 
                         </div>
-                        <div className="col-lg-4 col-md-4">
-                            <ProjectSidebar />
+
+                        <div className="col-md-12 col-lg-4">
+                            <div className="project-details-sidebar">
+                                <ul className="project-info-list">
+                                    {service.map((oneService, index) => {
+                                        return (
+                                            <Link to={'/' + oneService.url}>
+                                                <li key={index} className="d-flex align-items-center mb-3 p-4 rounded">
+                                                    <span className="ti-link icon-sm color-secondary d-block mr-3" />
+                                                    <div className="d-block">
+                                                        <h5 className="mb-0">{oneService.name}</h5>
+                                                    </div>
+                                                </li>
+                                            </Link>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://localhost:3000",
+  "homepage": "http://dhyeyrathod111.rf.gd/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
@@ -15,7 +15,7 @@
     "react-global-configuration": "^1.4.1",
     "react-helmet": "^6.1.0",
     "react-redux": "^7.2.4",
-    "react-router": "^5.2.0",
+    "react-router": "^5.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",

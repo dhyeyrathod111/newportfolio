@@ -35,7 +35,7 @@ function ProjectSidebar() {
 
 const OneSidebarProject = props => {
     return (
-        <Link to={'/projects_details/'+props.data.title+'/'+props.data.id}>
+        <Link to={'/projects_details?id='+props.data.id}>
             <li className="clearfix" key={props.data.id}>
                 <div className="wi"><img src={config.get('api_image_url') + props.data.file_name} alt="recent post" className="img-fluid rounded" /></div>
                 <div className="wb"><a href="#">{props.data.title}</a><span className="post-date">May 8, 2016</span></div>

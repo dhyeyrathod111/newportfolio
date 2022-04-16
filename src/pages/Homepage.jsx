@@ -30,10 +30,10 @@ const Homepage = props => {
                 <Workprocesssection />
                 <Calltoactionvideo />
                 <Outstandingsection />
-                <Testimonialsection />
+                {/* <Testimonialsection />
                 <Ourblogsection />
                 <Clientsection />
-                <Teamtwosection />
+                <Teamtwosection /> */}
                 <Footer />
             </div>
         </React.Fragment>

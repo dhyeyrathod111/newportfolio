@@ -36,15 +36,13 @@ function HeaderUrlLInks() {
                                 <li><a href="basic-sign-up.html">Signup Page 1</a></li>
                             </ul>
                         </li>*/}
-                        
 
                     </ul>
                 </li>
                 <li><Link to={'/technology'}>Technology</Link></li>
                 <li><Link to={'/resume'}>Resume</Link></li>
                 <li><Link to={'/projects'}>Projects</Link></li>
-                {/* <li><a href="services.html">Team</a></li> */}
-                <li><a href="services.html">Contact us</a></li>
+                <li><Link to="/contact">Contact us</Link></li>
             </ul>
         </div>
     )

@@ -15,20 +15,21 @@ import TechnologyPage from './pages/TechnologyPage';
 import ResumePage from './pages/ResumePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetails from './pages/ProjectDetails';
-import TechnologyDetails from './pages/TechnologyDetails';
+import TechDetails from './pages/TechDetails';
+import ContactUs from './pages/ContactUs';
 
 config.set({
-    api_url: 'http://localhost/dhyey_rathod/apistacksetup/api/',
-    api_image_url: 'http://localhost/dhyey_rathod/apistacksetup/',
-    facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
-    instagram_url:'https://www.instagram.com/prince.rathod111/'
+	api_url: 'http://localhost/dhyey_rathod/apistacksetup/api/',
+	api_image_url: 'http://localhost/dhyey_rathod/apistacksetup/',
+	facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
+	instagram_url: 'https://www.instagram.com/prince.rathod111/'
 });
 
-// config.set({ 
-//     api_url:'http://dhyeyrathod.rf.gd/apistacksetup/API/',
-//     api_image_url:'http://dhyeyrathod.rf.gd/apistacksetup/',
-//     facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
-//     instagram_url:'https://www.instagram.com/prince.rathod111/'
+// config.set({
+// 	api_url: 'http://dhyeyrathod111.rf.gd/apistacksetup/API/',
+// 	api_image_url: 'http://dhyeyrathod111.rf.gd/apistacksetup/',
+// 	facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
+// 	instagram_url: 'https://www.instagram.com/prince.rathod111/'
 // });
 
 
@@ -47,10 +48,11 @@ function App() {
 					<Route exact path="/web_hosting" component={Webhosting} />
 					<Route exact path="/domain_registration" component={Domainregistration} />
 					<Route exact path="/technology" component={TechnologyPage} />
-					<Route exact path="/technology_details/:tech_id" component={TechnologyDetails} />
+					<Route exact path="/technology_details/:techname/:tech_id" component={TechDetails} />
 					<Route exact path="/resume" component={ResumePage} />
 					<Route exact path="/projects" component={ProjectsPage} />
-					<Route exact path="/projects_details/:project_title/:project_id" component={ProjectDetails} />
+					<Route exact path="/projects_details" component={ProjectDetails} />
+					<Route exact path="/contact" component={ContactUs} />
 				</Switch>
 			</BrowserRouter>
 		</section>

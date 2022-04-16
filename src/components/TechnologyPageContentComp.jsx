@@ -8,9 +8,7 @@ const TechnologyPageContentComp = props => {
         if (apidata == null) {
             fetch(`${config.get('api_url')}/all_skill`)
                 .then(response => response.json())
-                .then(data => {
-                    setApidata(data);
-                });
+                .then(data => setApidata(data));
         }
     });
     if (apidata == null) return <Loader />
@@ -20,10 +18,11 @@ const TechnologyPageContentComp = props => {
                 <div className="row">
                     {apidata.skills.map(oneSkils => (
                         <OneTechnologyComp
-                            name="Jquery"
+                            name={oneSkils.skills_name}
                             image={oneSkils.image}
                             description={oneSkils.descriptions.slice(0, 60)}
                             key={oneSkils.id}
+                            id={oneSkils.id}
                         />
                     ))}
                 </div>
