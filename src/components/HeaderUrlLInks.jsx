@@ -39,9 +39,9 @@ function HeaderUrlLInks() {
 
                     </ul>
                 </li>
-                <li><Link to={'/technology'}>Technology</Link></li>
+                {/* <li><Link to={'/technology'}>Technology</Link></li> */}
                 <li><Link to={'/resume'}>Resume</Link></li>
-                <li><Link to={'/projects'}>Projects</Link></li>
+                {/* <li><Link to={'/projects'}>Projects</Link></li> */}
                 <li><Link to="/contact">Contact us</Link></li>
             </ul>
         </div>

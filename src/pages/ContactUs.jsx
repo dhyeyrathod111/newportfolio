@@ -6,6 +6,7 @@ import ContactUsContent from '../components/ContactUsContent';
 import Footer from '../components/Footer';
 
 const ContactUs = props => {
+    useEffect(() => window.scrollTo(0,0));
     return (
         <React.Fragment>
             <OtherPageHeader />

@@ -3,7 +3,7 @@ import OtherPageHeader from '../components/OtherPageHeader';
 import OtherPageBanner from '../components/OtherPageBanner';
 import Promosection from '../components/Promosection';
 import Workprocesssection from '../components/Workprocesssection';
-import Workprogress from '../components/Workprogress';
+import Testimonialsection from '../components/Testimonialsection';
 import Clientsection from '../components/Clientsection';
 import Footer from '../components/Footer';
 import AboutHomepage from '../components/AboutHomepage';
@@ -18,7 +18,7 @@ const AboutusPage = () => {
                 <AboutHomepage />
                 <Promosection />
                 <Workprocesssection />
-                <Workprogress />
+                <Testimonialsection />
                 <Clientsection />
                 <Footer />
             </div>

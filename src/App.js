@@ -18,19 +18,19 @@ import ProjectDetails from './pages/ProjectDetails';
 import TechDetails from './pages/TechDetails';
 import ContactUs from './pages/ContactUs';
 
-config.set({
-	api_url: 'http://localhost/dhyey_rathod/apistacksetup/api/',
-	api_image_url: 'http://localhost/dhyey_rathod/apistacksetup/',
-	facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
-	instagram_url: 'https://www.instagram.com/prince.rathod111/'
-});
-
 // config.set({
-// 	api_url: 'http://dhyeyrathod111.rf.gd/apistacksetup/API/',
-// 	api_image_url: 'http://dhyeyrathod111.rf.gd/apistacksetup/',
+// 	api_url: 'http://localhost/dhyey_rathod/apistacksetup/api/',
+// 	api_image_url: 'http://localhost/dhyey_rathod/apistacksetup/',
 // 	facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
 // 	instagram_url: 'https://www.instagram.com/prince.rathod111/'
 // });
+
+config.set({
+	api_url: 'http://dhyeyrathod111.rf.gd/apistacksetup/API/',
+	api_image_url: 'http://dhyeyrathod111.rf.gd/apistacksetup/',
+	facebook_url: 'https://www.facebook.com/dhyey.rathod.98',
+	instagram_url: 'https://www.instagram.com/prince.rathod111/'
+});
 
 
 function App() {

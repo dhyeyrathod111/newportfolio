@@ -26,7 +26,7 @@ function Workprocesssection() {
 								</div>
 								<div className="col-md-7">
 									<h5>SRS</h5>
-									<p>SRS(software requirements specification) disscuss with clients.</p>
+									<p>SRS(software requirements specification) disscuss with clients and collect information</p>
 								</div>
 							</div>
 							<div className="process-line-l" />
@@ -73,7 +73,7 @@ function Workprocesssection() {
 								<div className="col-md-7">
 									<h5>Development</h5>
 									<p>
-										In development of application include the process releted data storage , business logic , workfow of application.
+										In development of application include the process releted business logic of application.
 									</p>
 								</div>
 							</div>
@@ -101,7 +101,7 @@ function Workprocesssection() {
 								</div>
 								<div className="col-md-7">
 									<h5>Testing</h5>
-									<p>In apllication testing we have to test each and every steps of applicaiton. and remove bugs form application.</p>
+									<p>In apllication testing we have to test each and every steps of applicaiton.</p>
 								</div>
 							</div>
 							<div className="process-line-r" />
@@ -120,7 +120,7 @@ function Workprocesssection() {
 								</div>
 								<div className="col-md-7">
 									<h5>Migration</h5>
-									<p>After the testing we have to migrate apllication on live. in this face we have to do server configration.</p>
+									<p>After the testing we have to migrate apllication on Production server for productivity.</p>
 								</div>
 							</div>
 							<div className="process-line-l" />

@@ -10,9 +10,7 @@ import Outstandingsection from '../components/Outstandingsection';
 import Calltoactionvideo from '../components/Calltoactionvideo';
 import Workprocesssection from '../components/Workprocesssection';
 import Testimonialsection from '../components/Testimonialsection';
-import Ourblogsection from '../components/Ourblogsection';
 import Clientsection from '../components/Clientsection';
-import Teamtwosection from '../components/Teamtwosection';
 import Footer from '../components/Footer';
 
 const Homepage = props => {
@@ -30,10 +28,8 @@ const Homepage = props => {
                 <Workprocesssection />
                 <Calltoactionvideo />
                 <Outstandingsection />
-                {/* <Testimonialsection />
-                <Ourblogsection />
+                <Testimonialsection />
                 <Clientsection />
-                <Teamtwosection /> */}
                 <Footer />
             </div>
         </React.Fragment>

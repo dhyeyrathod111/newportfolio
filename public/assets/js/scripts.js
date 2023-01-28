@@ -501,22 +501,8 @@ jQuery(function ($) {
 			// Callback function that is called at the end of any animation (only if animate is not false).
 			onStop: $.noop
 		});
-
 	});
 
-	// 18. Contact Form
-	if ($("#contactForm").length) {
-		$("#contactForm").validator().on("submit", function (event) {
-			if (event.isDefaultPrevented()) {
-				// handle the invalid form...
-				submitMSG(false, '.contact');
-			} else {
-				// everything looks good!
-				event.preventDefault();
-				submitContactForm();
-			}
-		});
-	}
 
 
 	function submitContactForm() {

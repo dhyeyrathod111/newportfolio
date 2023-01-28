@@ -1,7 +1,59 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import Loader from './Loader';
+import config from 'react-global-configuration';
+
+
+const AlertComponent = props => {
+    return (
+        <div className={'alert alert-' + props.type} role="alert">
+            <p className="text-center"><b>{props.message}</b></p>
+        </div>
+    )
+}
+
+
 
 const ContactUsContent = () => {
+
+    const accessObject = {
+        loaderflag: false,
+        showAlert: false,
+        responseMessage: '',
+        alertType: ''
+    }
+
+    const [name, setName] = useState('');
+    const [email, setemail] = useState('');
+    const [message, setmessage] = useState('');
+    const [contact, setContact] = useState('');
+    const [accessState, SetAccessState] = useState(accessObject);
+
+
+
+    const submitHnadle = event => {
+        event.preventDefault();
+        SetAccessState({ ...accessState, loaderflag: true });
+        let formData = new FormData();
+        formData.append('name', name); formData.append('email', email);
+        formData.append('message', message); formData.append('contact', contact);
+        fetch(`${config.get('api_url')}/contactus`, {
+            method: 'POST',
+            body: formData
+        }).then(response => response.json())
+            .then(data => {
+                debugger
+                SetAccessState({ ...accessState, loaderflag: false });
+                if (data.status == 'T') {
+                    SetAccessState({ ...accessState, alertType: 'success' });
+                } else {
+                    SetAccessState({ ...accessState, alertType: 'danger' });
+                }
+                SetAccessState({ ...accessState, loaderflag: false, showAlert: true, responseMessage: data.message })
+            });
+    }
+
+    if (accessState.loaderflag == true) return <Loader />
+
     return (
         <React.Fragment>
             <section className="contact-us-promo pt-100">
@@ -51,28 +103,34 @@ const ContactUsContent = () => {
                         <div className="alert alert-danger" />
                     </div>
                     <div className="row justify-content-around">
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                             <div className="contact-us-form gray-light-bg rounded p-5">
-                                <h4>Ready to get started?</h4>
+                                {accessState.showAlert ? <AlertComponent type="success" message={accessState.responseMessage} /> : ''}
+                                <h4 className="text-center">Ready to get started?</h4>
                                 <form action="#" method="POST" id="contactForm" className="contact-us-form" noValidate="true">
                                     <div className="form-row">
                                         <div className="col-12">
                                             <div className="form-group">
-                                                <input type="text" className="form-control" name="name" placeholder="Enter name" required="required" />
+                                                <input type="text" value={name} className="form-control" name="name" id="name" onChange={event => setName(event.target.value)} placeholder="Enter name" required="required" />
                                             </div>
                                         </div>
                                         <div className="col-12">
                                             <div className="form-group">
-                                                <input type="email" className="form-control" name="email" placeholder="Enter email" required="required" />
+                                                <input type="email" value={email} className="form-control" name="email" id="email" onChange={event => setemail(event.target.value)} placeholder="Enter email" required="required" />
                                             </div>
                                         </div>
                                         <div className="col-12">
                                             <div className="form-group">
-                                                <textarea name="message" id="message" className="form-control" rows={7} cols={25} placeholder="Message" defaultValue={""} />
+                                                <input type="text" value={contact} className="form-control" name="contact" onChange={event => setContact(event.target.value)} placeholder="Enter Contact" required="required" />
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <textarea name="message" id="message" className="form-control" rows={7} cols={25} placeholder="Message" value={message} onChange={event => setmessage(event.target.value)} />
                                             </div>
                                         </div>
                                         <div className="col-sm-12 mt-3">
-                                            <button type="submit" className="btn secondary-solid-btn disabled" id="btnContactUs" style={{ pointerEvents: 'all', cursor: 'pointer' }}>
+                                            <button type="submit" onClick={submitHnadle} className="btn secondary-solid-btn disabled" id="btnContactUs" style={{ cursor: 'pointer' }}>
                                                 Send Message
                                             </button>
                                         </div>
@@ -80,19 +138,10 @@ const ContactUsContent = () => {
                                 </form>
                             </div>
                         </div>
-                        <div className="col-md-5">
-                            <div className="contact-us-content">
-                                <h2>Looking for a excellent Business idea?</h2>
-                                <p className="lead">Seamlessly deliver pandemic e-services and next-generation initiatives.</p>
-                                <Link to={'/about'} className="btn outline-btn align-items-center">Get Directions <span className="ti-arrow-right pl-2" /></Link>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
         </React.Fragment>
-
-
     )
 }
 
